@@ -50,5 +50,8 @@ plot <- ggplot(data = result, aes(x = Price, y = Approving)) +
 
 plot
 
+ggsave("approval_vs_sp500.png") 
+
 ```
 
+![Correlation Between S&P 500 Price and Approval Ratings](approval_vs_sp500.png)
