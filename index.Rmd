@@ -56,7 +56,7 @@ plot <- ggplot(data = result, aes(x = Price, y = Approving)) +
   scale_color_discrete(name = "Year/Term")
 
 plot
-ggsave("approval_vs_sp500.png")
+
 
 result <- result |>
   mutate(`Change %` = as.numeric(gsub("%", "", `Change %`)))
@@ -74,7 +74,7 @@ plot2 <- ggplot(data = result, aes(x = `Change %`, y = `Approval Change`)) +
   theme_minimal(base_size = 14)
 
 plot2
-ggsave("netApproval_vs_netsp500.png")
+ggsave("approval_vs_sp500.png")
  
 
 ```
