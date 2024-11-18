@@ -32,7 +32,7 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -115,7 +115,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["data/Presidential_Approval_Data.csv","data/SP500.csv","index_files/anchor-4.2.2/anchor.min.js","index_files/bowser-1.9.3/bowser.min.js","index_files/distill-2.2.21/template.v2.js","index_files/figure-html5/unnamed-chunk-1-1.png","index_files/header-attrs-2.17/header-attrs.js","index_files/header-attrs-2.28/header-attrs.js","index_files/jquery-3.6.0/jquery-3.6.0.js","index_files/jquery-3.6.0/jquery-3.6.0.min.js","index_files/jquery-3.6.0/jquery-3.6.0.min.map","index_files/popper-2.6.0/popper.min.js","index_files/tippy-6.2.7/tippy-bundle.umd.min.js","index_files/tippy-6.2.7/tippy-light-border.css","index_files/tippy-6.2.7/tippy.css","index_files/tippy-6.2.7/tippy.umd.min.js","index_files/webcomponents-2.0.0/webcomponents.js"]}
+  {"type":"character","attributes":{},"value":["approval_vs_sp500.png","data/Presidential_Approval_Data.csv","data/SP500.csv","index_files/anchor-4.2.2/anchor.min.js","index_files/bowser-1.9.3/bowser.min.js","index_files/distill-2.2.21/template.v2.js","index_files/figure-html5/unnamed-chunk-1-1.png","index_files/figure-html5/unnamed-chunk-1-2.png","index_files/header-attrs-2.17/header-attrs.js","index_files/header-attrs-2.28/header-attrs.js","index_files/jquery-3.6.0/jquery-3.6.0.js","index_files/jquery-3.6.0/jquery-3.6.0.min.js","index_files/jquery-3.6.0/jquery-3.6.0.min.map","index_files/popper-2.6.0/popper.min.js","index_files/tippy-6.2.7/tippy-bundle.umd.min.js","index_files/tippy-6.2.7/tippy-light-border.css","index_files/tippy-6.2.7/tippy.css","index_files/tippy-6.2.7/tippy.umd.min.js","index_files/webcomponents-2.0.0/webcomponents.js","netApproval_vs_netsp500.png"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
   <!--/radix_placeholder_navigation_in_header-->
@@ -1546,8 +1546,9 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <h2 id="project-thoughts">Project thoughts</h2>
 <p>My research question for the Final Project is: How are the approval ratings of incumbent U.S. presidents running for the second term related to the stock market performance during their first term? My hypothesis is that higher stock market growth results in higher approval ratings going into a re-election.
 The hypothesis may be true as economic performance is a big talking point during elections and it makes sense that the voting public would be more receptive to the second term of a President that has shown economic growth. In this case, the variables of interest are the performance of the S&amp;P 500 index, which is usually used to measure and gauge the development of the U.S. economy, and the approval ratings of an incumbent President going into re-election taken from the Roper Center.
-The approval rating variable will be measured by taking multiple sources (to ensure the overall representation is as accurate as possible) and will be compared to the S&amp;P based on monthly changes in the index and approval ratings between the midterm and presidential elections (24 months). A pattern in the data that would prove my hypothesis is if positive and negative changes in the S&amp;P translate to approval ratings and since the data will be measured over 2 years, it can account for before an incumbent declares they are running again.
+The approval rating variable will be measured by taking multiple sources (to ensure the overall representation is as accurate as possible) and will be compared to the S&amp;P based on monthly changes in the index and approval ratings between the midterm and presidential elections (24 months). A pattern in the data that would prove my hypothesis is if positive and negative changes in the S&amp;P translate to approval ratings and since the data will be measured over 2 years, it can account for before an incumbent declares that they are running again.
 A pattern that would disprove is if there was no positive correlation on average across the 24-month period.</p>
+<p>The two graphs strongly suggest that there is no correlation between Presidential Approval Rating and the price of S&amp;P 500, at least under the Obama administration. I felt the Obama administration was a good choice to see if there was a correlation as there was the 2009 Recession and the 2010 and 2014 midterms where the Republicans had gains in the Senate, House and gubernatorial elections. The graph that compares the net changes of the S&amp;P and Approval ratings indicates there is no relationship between the variables. The secod graph is the best indicator of an absence of a relationship as in this graph we are comparing the net changes in the same month and there is still no clear relationship between variables. A way to improve on this study would be to take data from other Presidents in the past and compare. But it could be inferred that at least in the first half of 2010s there is no clear relationship between Presidential Approval ratings and the S&amp;P 500.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://readr.tidyverse.org'>readr</a></span><span class='op'>)</span></span>
@@ -1572,18 +1573,47 @@ A pattern that would disprove is if there was no positive correlation on average
 <span></span>
 <span><span class='va'>result</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://dplyr.tidyverse.org/reference/mutate-joins.html'>inner_join</a></span><span class='op'>(</span><span class='va'>pres</span>, <span class='va'>SP</span>, by <span class='op'>=</span> <span class='st'>"Month"</span><span class='op'>)</span></span>
 <span></span>
+<span></span>
 <span><span class='va'>plot</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/ggplot.html'>ggplot</a></span><span class='op'>(</span>data <span class='op'>=</span> <span class='va'>result</span>, <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/aes.html'>aes</a></span><span class='op'>(</span>x <span class='op'>=</span> <span class='va'>Price</span>, y <span class='op'>=</span> <span class='va'>Approving</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span></span>
-<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/geom_smooth.html'>geom_smooth</a></span><span class='op'>(</span><span class='op'>)</span> <span class='op'>+</span></span>
+<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/geom_point.html'>geom_point</a></span><span class='op'>(</span><span class='op'>)</span> <span class='op'>+</span> </span>
+<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/geom_smooth.html'>geom_smooth</a></span><span class='op'>(</span>se <span class='op'>=</span> <span class='cn'>FALSE</span><span class='op'>)</span> <span class='op'>+</span> </span>
 <span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/labs.html'>labs</a></span><span class='op'>(</span></span>
 <span>    title <span class='op'>=</span> <span class='st'>"Obama Approval Ratings vs S&amp;P 500"</span>,</span>
 <span>    x <span class='op'>=</span> <span class='st'>"S&amp;P 500"</span>,</span>
-<span>    y <span class='op'>=</span> <span class='st'>"Approval %"</span></span>
-<span>  <span class='op'>)</span></span>
+<span>    y <span class='op'>=</span> <span class='st'>"Approval %"</span>,</span>
+<span>    caption <span class='op'>=</span> <span class='st'>"Data Sources: American Presidency Project (Approval Ratings), S&amp;P 500"</span></span>
+<span>  <span class='op'>)</span> <span class='op'>+</span></span>
+<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/ggtheme.html'>theme_minimal</a></span><span class='op'>(</span><span class='op'>)</span> <span class='op'>+</span> </span>
+<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/scale_colour_discrete.html'>scale_color_discrete</a></span><span class='op'>(</span>name <span class='op'>=</span> <span class='st'>"Year/Term"</span><span class='op'>)</span></span>
 <span></span>
 <span><span class='va'>plot</span></span></code></pre>
 </div>
-<p><img src="index_files/figure-html5/unnamed-chunk-1-1.png" width="624" /></p>
+<img src="index_files/figure-html5/unnamed-chunk-1-1.png" width="624" />
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>result</span> <span class='op'>&lt;-</span> <span class='va'>result</span> <span class='op'>|&gt;</span></span>
+<span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/mutate.html'>mutate</a></span><span class='op'>(</span>`Change %` <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/numeric.html'>as.numeric</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/grep.html'>gsub</a></span><span class='op'>(</span><span class='st'>"%"</span>, <span class='st'>""</span>, <span class='va'>`Change %`</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span></span>
+<span></span>
+<span></span>
+<span><span class='va'>plot2</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/ggplot.html'>ggplot</a></span><span class='op'>(</span>data <span class='op'>=</span> <span class='va'>result</span>, <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/aes.html'>aes</a></span><span class='op'>(</span>x <span class='op'>=</span> <span class='va'>`Change %`</span>, y <span class='op'>=</span> <span class='va'>`Approval Change`</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span></span>
+<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/geom_point.html'>geom_point</a></span><span class='op'>(</span>size <span class='op'>=</span> <span class='fl'>2</span>, color <span class='op'>=</span> <span class='st'>"black"</span>, alpha <span class='op'>=</span> <span class='fl'>0.7</span><span class='op'>)</span> <span class='op'>+</span> </span>
+<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/geom_smooth.html'>geom_smooth</a></span><span class='op'>(</span>method <span class='op'>=</span> <span class='st'>"lm"</span>, se <span class='op'>=</span> <span class='cn'>FALSE</span>, color <span class='op'>=</span> <span class='st'>"blue"</span>, size <span class='op'>=</span> <span class='fl'>1</span><span class='op'>)</span> <span class='op'>+</span></span>
+<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/labs.html'>labs</a></span><span class='op'>(</span></span>
+<span>    title <span class='op'>=</span> <span class='st'>"Approval Change vs. S&amp;P 500 Change %"</span>,</span>
+<span>    x <span class='op'>=</span> <span class='st'>"S&amp;P 500 Change (%)"</span>,</span>
+<span>    y <span class='op'>=</span> <span class='st'>"Approval Change"</span>,</span>
+<span>    caption <span class='op'>=</span> <span class='st'>"Data Sources: American Presidency Project (Approval Ratings), S&amp;P 500"</span></span>
+<span>  <span class='op'>)</span> <span class='op'>+</span></span>
+<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/ggtheme.html'>theme_minimal</a></span><span class='op'>(</span>base_size <span class='op'>=</span> <span class='fl'>14</span><span class='op'>)</span></span>
+<span></span>
+<span></span>
+<span></span>
+<span><span class='fu'><a href='https://ggplot2.tidyverse.org/reference/ggsave.html'>ggsave</a></span><span class='op'>(</span><span class='st'>"approval_vs_sp500.png"</span><span class='op'>)</span> </span></code></pre>
 </div>
+</div>
+<figure>
+<img src="approval_vs_sp500.png" alt="Correlation Between S&amp;P 500 Price and Approval Ratings" />
+<figcaption aria-hidden="true">Correlation Between S&amp;P 500 Price and Approval Ratings</figcaption>
+</figure>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
