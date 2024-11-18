@@ -79,8 +79,10 @@ ggsave("netApproval_vs_netsp500.png")
 
 ```
 
-![Correlation Between S&P 500 Price and Approval Ratings](approval_vs_sp500.png)
+
 
 The two graphs strongly suggest that there is no correlation between Presidential Approval Rating and the price of S&P 500, at least under the Obama administration. I felt the Obama administration was a good choice to see if there was a correlation as there was the 2009 Recession and the 2010 and 2014 midterms where the Republicans had gains in the Senate, House and gubernatorial elections. The graph that compares the net changes of the S&P and Approval ratings indicates there is no relationship between the variables. The secod graph is the best indicator of an absence of a relationship as in this graph we are comparing the net changes in the same month and there is still no clear relationship between variables. A way to improve on this study would be to take data from other Presidents in the past and compare. But it could be inferred that at least in the first half of 2010s there is no clear relationship between Presidential Approval ratings and the S&P 500.
 
+
+![Correlation Between S&P 500 Price and Approval Ratings](approval_vs_sp500.png)
 ![Approval Change vs. S&P 500 Change %](netApproval_vs_netsp500.png)
