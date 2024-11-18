@@ -1590,7 +1590,9 @@ A pattern that would disprove is if there was no positive correlation on average
 </div>
 <img src="index_files/figure-html5/unnamed-chunk-1-1.png" width="624" />
 <div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>result</span> <span class='op'>&lt;-</span> <span class='va'>result</span> <span class='op'>|&gt;</span></span>
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='fu'><a href='https://ggplot2.tidyverse.org/reference/ggsave.html'>ggsave</a></span><span class='op'>(</span><span class='st'>"approval_vs_sp500.png"</span><span class='op'>)</span> </span>
+<span></span>
+<span><span class='va'>result</span> <span class='op'>&lt;-</span> <span class='va'>result</span> <span class='op'>|&gt;</span></span>
 <span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/mutate.html'>mutate</a></span><span class='op'>(</span>`Change %` <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/numeric.html'>as.numeric</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/grep.html'>gsub</a></span><span class='op'>(</span><span class='st'>"%"</span>, <span class='st'>""</span>, <span class='va'>`Change %`</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span></span>
 <span></span>
 <span></span>
@@ -1607,13 +1609,11 @@ A pattern that would disprove is if there was no positive correlation on average
 <span></span>
 <span></span>
 <span></span>
-<span><span class='fu'><a href='https://ggplot2.tidyverse.org/reference/ggsave.html'>ggsave</a></span><span class='op'>(</span><span class='st'>"approval_vs_sp500.png"</span><span class='op'>)</span> </span></code></pre>
+<span><span class='fu'><a href='https://ggplot2.tidyverse.org/reference/ggsave.html'>ggsave</a></span><span class='op'>(</span><span class='st'>"netapproval_vs_netsp500.png"</span><span class='op'>)</span> </span></code></pre>
 </div>
 </div>
-<figure>
-<img src="approval_vs_sp500.png" alt="Correlation Between S&amp;P 500 Price and Approval Ratings" />
-<figcaption aria-hidden="true">Correlation Between S&amp;P 500 Price and Approval Ratings</figcaption>
-</figure>
+<p><img src="approval_vs_sp500.png" alt="Correlation Between S&amp;P 500 Price and Approval Ratings" />
+<img src="netapproval_vs_netsp500.png" alt="Correlation Between S&amp;P 500 Price Net Change and Approval Ratings Net Change" /></p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->

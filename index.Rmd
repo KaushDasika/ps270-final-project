@@ -59,7 +59,7 @@ plot <- ggplot(data = result, aes(x = Price, y = Approving)) +
   scale_color_discrete(name = "Year/Term")
 
 plot
-
+ggsave("approval_vs_sp500.png") 
 
 result <- result |>
   mutate(`Change %` = as.numeric(gsub("%", "", `Change %`)))
@@ -78,9 +78,9 @@ plot2 <- ggplot(data = result, aes(x = `Change %`, y = `Approval Change`)) +
 
 
 
-ggsave("approval_vs_sp500.png") 
+ggsave("netapproval_vs_netsp500.png") 
 
 ```
 
 ![Correlation Between S&P 500 Price and Approval Ratings](approval_vs_sp500.png)
-
+![Correlation Between S&P 500 Price Net Change and Approval Ratings Net Change](netapproval_vs_netsp500.png)
