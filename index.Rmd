@@ -77,7 +77,7 @@ plot2 <- ggplot(data = result, aes(x = `Change %`, y = `Approval Change`)) +
   theme_minimal(base_size = 14)
 
 
-
+plot2
 ggsave("netapproval_vs_netsp500.png") 
 
 ```
