@@ -45,6 +45,8 @@ SP <- rename(SP, Month = Date)
 
 result <- inner_join(pres, SP, by = "Month")
 
+result
+
 
 plot <- ggplot(data = result, aes(x = Price, y = Approving)) +
   geom_point() + 
