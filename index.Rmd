@@ -28,46 +28,52 @@ library(tidyverse)
 library(dplyr)
 library(ggplot2)
 
-pres <- read_csv("data/Presidential_Approval_Data.csv")
-SP <- read_csv("data/SP500.csv")
+#Approval Ratings Data
+presApproval <- read_csv("data/PresApproval.csv")
 
+presApproval$Date <- dmy(paste("01", presApproval$Date)) 
+presApproval$Date <- format(presApproval$Date, "%m/%Y")
 
-
-pres <- pres |> 
-  mutate(Month = as.character(Month))
-
-SP <- SP |>
-  mutate(Date = as.character(Date))
-
-
-SP <- rename(SP, Month = Date)
-
-
-result <- inner_join(pres, SP, by = "Month")
-
-result
-
-
-plot <- ggplot(data = result, aes(x = Price, y = Approving)) +
-  geom_point() + 
-  geom_smooth(se = FALSE) + 
-  labs(
-    title = "Obama Approval Ratings vs S&P 500",
-    x = "S&P 500",
-    y = "Approval %",
-    caption = "Data Sources: American Presidency Project (Approval Ratings), S&P 500"
-  ) +
-  theme_minimal() + 
-  scale_color_discrete(name = "Year/Term")
-
-plot
+#S&P 500 Data
+SPObama <- read_csv("data/ObamaSP500.csv")
+SPBush2 <- read_csv("data/Bush2SP500.csv")
+SPClinton <- read_csv("data/ClintonSP500.csv")
+SPBush1 <- read_csv("data/Bush1SP500.csv")
+SPCarter <- read_csv("data/CarterSP500.csv")
  
 
-result <- result |>
+SPObama$Date <- mdy(SPObama$Date)           
+SPObama$Date <- format(SPObama$Date, "%m/%Y")
+
+SPBush2$Date <- mdy(SPBush2$Date)           
+SPBush2$Date <- format(SPBush2$Date, "%m/%Y")
+
+SPClinton$Date <- mdy(SPClinton$Date)           
+SPClinton$Date <- format(SPClinton$Date, "%m/%Y")
+
+SPBush1$Date <- mdy(SPBush1$Date)           
+SPBush1$Date <- format(SPBush1$Date, "%m/%Y")
+
+SPCarter$Date <- mdy(SPCarter$Date)           
+SPCarter$Date <- format(SPCarter$Date, "%m/%Y")
+
+
+
+SPTotal <- bind_rows(SPObama, SPBush2, SPClinton, SPBush1, SPCarter)
+
+resultTotal <- inner_join(presApproval, SPTotal, by = "Date")
+
+resultTotal <- resultTotal |>
   mutate(`Change %` = as.numeric(gsub("%", "", `Change %`)))
 
+resultTotal
 
-plot2 <- ggplot(data = result, aes(x = `Change %`, y = `Approval Change`)) +
+
+
+
+
+
+plot2 <- ggplot(data = resultTotal, aes(x = `Change %`, y = `Change`)) +
   geom_point(size = 2, color = "black", alpha = 0.7) + 
   geom_smooth(method = "lm", se = FALSE, color = "blue", size = 1) +
   labs(
