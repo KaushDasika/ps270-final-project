@@ -17,6 +17,24 @@ This hypothesis sheds light on how voters respond to economic outcomes under inc
 
 
 
+Data
+
+
+
+This research is technically a longitudinal observational design, analyzing monthly changes in U.S. presidential approval ratings and S&P 500 performance across five presidencies over 36 months. The design draws on elements of a differences-in-differences approach to understand if shifts in economic performance correlate with changes in approval ratings across time and groups (e.g., by party affiliation or re-election outcomes). In this study, the dependent variable is the change in presidential approval rating and the independent variable is the percentage change in the valuation of the S&P 500 index.
+
+For this study, I sourced the S&P 500 data from S&P Global, which is the company that maintains the index. This data includes the percentage change over a monthly basis as using the dollar valuation of the index may skew the findings owing to fluctuating U.S dollar value and economic conditions which are different for each candidate hence the use of net change in the index to standardize the data. The presidential approval ratings are sourced from the American Presidency Project which has all the approval polls run by Gallup for each President. Since some polls were bi-monthly, to standardize the data, I took the approval ratings measured at the start of each month since that was when the data for the S&P was also measured. To ensure a large dataset with different variables such as party, decade, and election result, the study analyzes the following elections:
+
+President Obama in 2012 (Data measured from 2010-2013)
+President Bush in 2004 (Data measured from 2002-2005)
+President Clinton in 1996 (Data measured from 1994-1997)
+President Bush in 1992 (Data measured from 1990-1993)
+President Carter in 1980 (Data measured from 1978-1981)
+
+This data includes both Republican and Democrat candidates across five different decades and since the data will be measured over 36 months for each candidate, it can account for before an incumbent declares that they are running again. The data also includes cases where the incumbent lost such as Bush in 1992 and Carter in 1980 so we can compare the outcome and if that had any effect.
+
+Below is the plot that compares the Approval Change vs. S&P 500 Change for all Presidents and to give some context, right under it is the summarized regression output.
+
 
 
 ```{r}
