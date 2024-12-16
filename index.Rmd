@@ -27,6 +27,7 @@ library(readr)
 library(tidyverse)
 library(dplyr)
 library(ggplot2)
+library(knitr)
 
 #Approval Ratings Data
 presApproval <- read_csv("data/PresApproval.csv")
@@ -58,7 +59,7 @@ SPCarter$Date <- mdy(SPCarter$Date)
 SPCarter$Date <- format(SPCarter$Date, "%m/%Y")
 
 
-
+#Merged Dataset
 SPTotal <- bind_rows(SPObama, SPBush2, SPClinton, SPBush1, SPCarter)
 
 resultTotal <- inner_join(presApproval, SPTotal, by = "Date")
@@ -69,10 +70,7 @@ resultTotal <- resultTotal |>
 resultTotal
 
 
-
-
-
-
+# Net Approval vs S&P 500 for all
 plot2 <- ggplot(data = resultTotal, aes(x = `Change %`, y = `Change`)) +
   geom_point(size = 2, color = "black", alpha = 0.7) + 
   geom_smooth(method = "lm", se = FALSE, color = "blue", size = 1) +
@@ -87,6 +85,63 @@ plot2 <- ggplot(data = resultTotal, aes(x = `Change %`, y = `Change`)) +
 
 plot2
 
+
+
+all <- lm(Change ~ `Change %`, data = resultTotal)
+summary(all)
+
+
+# Democrats
+
+SPDems <- bind_rows(SPObama, SPClinton, SPCarter)
+
+resultDems <- inner_join(presApproval, SPDems, by = "Date")
+
+resultDems <- resultDems |>
+  mutate(`Change %` = as.numeric(gsub("%", "", `Change %`)))
+
+dems <- lm(Change ~ `Change %`, data = resultDems)
+summary(dems)
+
+
+# Republicans
+
+SPRep <- bind_rows(SPBush1, SPBush2)
+
+resultRep <- inner_join(presApproval, SPRep, by = "Date")
+
+resultRep <- resultRep |>
+  mutate(`Change %` = as.numeric(gsub("%", "", `Change %`)))
+
+reps <- lm(Change ~ `Change %`, data = resultRep)
+summary(reps)
+
+
+# Election Result = Win
+
+SPWin <- bind_rows(SPObama, SPBush1, SPClinton)
+
+resultWin <- inner_join(presApproval, SPWin, by = "Date")
+
+resultWin <- resultWin |>
+  mutate(`Change %` = as.numeric(gsub("%", "", `Change %`)))
+
+win <- lm(Change ~ `Change %`, data = resultWin)
+summary(win)
+
+
+# Election Result = Loss
+
+SPLoss <- bind_rows(SPBush2, SPCarter)
+
+resultLoss <- inner_join(presApproval, SPLoss, by = "Date")
+
+resultLoss <- resultLoss |>
+  mutate(`Change %` = as.numeric(gsub("%", "", `Change %`)))
+
+
+loss <- lm(Change ~ `Change %`, data = resultLoss)
+summary(loss)
 
 ```
 
