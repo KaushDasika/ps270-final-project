@@ -28,6 +28,7 @@ library(tidyverse)
 library(dplyr)
 library(ggplot2)
 library(knitr)
+knitr::opts_chunk$set(echo = TRUE, fig.align = 'center', fig.width = 8, fig.height = 6)
 
 #Approval Ratings Data
 presApproval <- read_csv("data/PresApproval.csv")
@@ -67,9 +68,6 @@ resultTotal <- inner_join(presApproval, SPTotal, by = "Date")
 resultTotal <- resultTotal |>
   mutate(`Change %` = as.numeric(gsub("%", "", `Change %`)))
 
-resultTotal
-
-
 # Net Approval vs S&P 500 for all
 plotAll <- ggplot(data = resultTotal, aes(x = `Change %`, y = `Change`)) +
   geom_point(size = 3, color = "black", alpha = 0.8) + 
@@ -90,18 +88,24 @@ plotAll <- ggplot(data = resultTotal, aes(x = `Change %`, y = `Change`)) +
     plot.caption = element_text(hjust = 1)
   )
 
-
-plotAll
-
-
-
-all <- lm(Change ~ `Change %`, data = resultTotal)
-summary(all)
-
 ```
 
 
+```{r plot-all, echo=FALSE, fig.width=8, fig.height=6, fig.align='center'}
+print(plotAll)
+```
 
+```{r}
+all <- lm(Change ~ `Change %`, data = resultTotal)
+
+modelsummary::modelsummary(
+  all,
+  statistic = c("Standard Error. = {std.error}", 
+                "p-value = {p.value}"),
+  gof_map = c("nobs", "r.squared", "adj.r.squared"),
+  coef_rename = c("(Intercept)" = "Approval Change")
+)
+```
 
 
 
