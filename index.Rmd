@@ -121,6 +121,13 @@ modelsummary::modelsummary(
 )
 ```
 
+Analysis:
+
+As we can tell from the graph it appears that there is very little if any positive correlation, but to get a better idea of the relationship, the best indicator would be the regression output. As per this output, the relationships examined in this model are clearly not statistically significant, as all p-values are above the standard 0.05 threshold. This implies that there is no strong evidence of a direct link between changes in the S&P 500 and presidential approval ratings in this dataset. The low R² values suggest that the model is not capturing much of the variation in presidential approval ratings, meaning other factors (besides the S&P 500) likely play a much larger role.
+
+This suggests there is no correlation, but to confirm this, I will also analyze the graphs and regression outputs based on party and election outcomes to see if those factors make any measurable impact.
+
+First let us see based on party, below are the plots and regression outputs with the first focusing on Democrat incumbents and the second on Republican incumbents.
 
 
 ```{r}
@@ -263,7 +270,7 @@ print(plotWin)
 win <- lm(Change ~ `Change %`, data = resultWin)
 
 modelsummary::modelsummary(
-  reps,
+  win,
   statistic = c("Standard Error. = {std.error}", 
                 "p-value = {p.value}"),
   gof_map = c("nobs", "r.squared", "adj.r.squared"),
@@ -316,7 +323,7 @@ print(plotLoss)
 loss <- lm(Change ~ `Change %`, data = resultLoss)
 
 modelsummary::modelsummary(
-  reps,
+  loss,
   statistic = c("Standard Error. = {std.error}", 
                 "p-value = {p.value}"),
   gof_map = c("nobs", "r.squared", "adj.r.squared"),

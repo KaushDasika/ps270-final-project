@@ -1692,6 +1692,10 @@ President Carter in 1980 (Data measured from 1978-1981)</p>
 </tbody>
 </table>
 </div>
+<p>Analysis:</p>
+<p>As we can tell from the graph it appears that there is very little if any positive correlation, but to get a better idea of the relationship, the best indicator would be the regression output. As per this output, the relationships examined in this model are clearly not statistically significant, as all p-values are above the standard 0.05 threshold. This implies that there is no strong evidence of a direct link between changes in the S&amp;P 500 and presidential approval ratings in this dataset. The low R² values suggest that the model is not capturing much of the variation in presidential approval ratings, meaning other factors (besides the S&amp;P 500) likely play a much larger role.</p>
+<p>This suggests there is no correlation, but to confirm this, I will also analyze the graphs and regression outputs based on party and election outcomes to see if those factors make any measurable impact.</p>
+<p>First let us see based on party, below are the plots and regression outputs with the first focusing on Democrat incumbents and the second on Republican incumbents.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span><span class='co'># Democrats</span></span>
@@ -1932,7 +1936,7 @@ President Carter in 1980 (Data measured from 1978-1981)</p>
 <pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>win</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/lm.html'>lm</a></span><span class='op'>(</span><span class='va'>Change</span> <span class='op'>~</span> <span class='va'>`Change %`</span>, data <span class='op'>=</span> <span class='va'>resultWin</span><span class='op'>)</span></span>
 <span></span>
 <span><span class='fu'>modelsummary</span><span class='fu'>::</span><span class='fu'><a href='https://modelsummary.com/man/modelsummary.html'>modelsummary</a></span><span class='op'>(</span></span>
-<span>  <span class='va'>reps</span>,</span>
+<span>  <span class='va'>win</span>,</span>
 <span>  statistic <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"Standard Error. = {std.error}"</span>, </span>
 <span>                <span class='st'>"p-value = {p.value}"</span><span class='op'>)</span>,</span>
 <span>  gof_map <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"nobs"</span>, <span class='st'>"r.squared"</span>, <span class='st'>"adj.r.squared"</span><span class='op'>)</span>,</span>
@@ -1955,39 +1959,39 @@ President Carter in 1980 (Data measured from 1978-1981)</p>
 <tbody>
 <tr class="odd">
 <td>Approval Change</td>
-<td>-0.890</td>
+<td>-0.226</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Standard Error. = 0.641</td>
+<td>Standard Error. = 0.449</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>p-value = 0.169</td>
+<td>p-value = 0.615</td>
 </tr>
 <tr class="even">
 <td>Change %</td>
-<td>0.205</td>
+<td>0.062</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Standard Error. = 0.154</td>
+<td>Standard Error. = 0.114</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>p-value = 0.186</td>
+<td>p-value = 0.585</td>
 </tr>
 <tr class="odd">
 <td>Num.Obs.</td>
-<td>72</td>
+<td>108</td>
 </tr>
 <tr class="even">
 <td>R2</td>
-<td>0.025</td>
+<td>0.003</td>
 </tr>
 <tr class="odd">
 <td>R2 Adj.</td>
-<td>0.011</td>
+<td>-0.007</td>
 </tr>
 </tbody>
 </table>
@@ -2032,7 +2036,7 @@ President Carter in 1980 (Data measured from 1978-1981)</p>
 <pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>loss</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/lm.html'>lm</a></span><span class='op'>(</span><span class='va'>Change</span> <span class='op'>~</span> <span class='va'>`Change %`</span>, data <span class='op'>=</span> <span class='va'>resultLoss</span><span class='op'>)</span></span>
 <span></span>
 <span><span class='fu'>modelsummary</span><span class='fu'>::</span><span class='fu'><a href='https://modelsummary.com/man/modelsummary.html'>modelsummary</a></span><span class='op'>(</span></span>
-<span>  <span class='va'>reps</span>,</span>
+<span>  <span class='va'>loss</span>,</span>
 <span>  statistic <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"Standard Error. = {std.error}"</span>, </span>
 <span>                <span class='st'>"p-value = {p.value}"</span><span class='op'>)</span>,</span>
 <span>  gof_map <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"nobs"</span>, <span class='st'>"r.squared"</span>, <span class='st'>"adj.r.squared"</span><span class='op'>)</span>,</span>
@@ -2055,39 +2059,39 @@ President Carter in 1980 (Data measured from 1978-1981)</p>
 <tbody>
 <tr class="odd">
 <td>Approval Change</td>
-<td>-0.890</td>
+<td>-0.904</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Standard Error. = 0.641</td>
+<td>Standard Error. = 0.620</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>p-value = 0.169</td>
+<td>p-value = 0.150</td>
 </tr>
 <tr class="even">
 <td>Change %</td>
-<td>0.205</td>
+<td>0.209</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Standard Error. = 0.154</td>
+<td>Standard Error. = 0.139</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>p-value = 0.186</td>
+<td>p-value = 0.139</td>
 </tr>
 <tr class="odd">
 <td>Num.Obs.</td>
-<td>72</td>
+<td>71</td>
 </tr>
 <tr class="even">
 <td>R2</td>
-<td>0.025</td>
+<td>0.031</td>
 </tr>
 <tr class="odd">
 <td>R2 Adj.</td>
-<td>0.011</td>
+<td>0.017</td>
 </tr>
 </tbody>
 </table>
