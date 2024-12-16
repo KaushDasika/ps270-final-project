@@ -17,7 +17,7 @@ This hypothesis sheds light on how voters respond to economic outcomes under inc
 
 
 
-Data
+Data:
 
 
 
@@ -26,10 +26,16 @@ This research is technically a longitudinal observational design, analyzing mont
 For this study, I sourced the S&P 500 data from S&P Global, which is the company that maintains the index. This data includes the percentage change over a monthly basis as using the dollar valuation of the index may skew the findings owing to fluctuating U.S dollar value and economic conditions which are different for each candidate hence the use of net change in the index to standardize the data. The presidential approval ratings are sourced from the American Presidency Project which has all the approval polls run by Gallup for each President. Since some polls were bi-monthly, to standardize the data, I took the approval ratings measured at the start of each month since that was when the data for the S&P was also measured. To ensure a large dataset with different variables such as party, decade, and election result, the study analyzes the following elections:
 
 President Obama in 2012 (Data measured from 2010-2013)
+
 President Bush in 2004 (Data measured from 2002-2005)
+
 President Clinton in 1996 (Data measured from 1994-1997)
+
 President Bush in 1992 (Data measured from 1990-1993)
+
 President Carter in 1980 (Data measured from 1978-1981)
+
+
 
 This data includes both Republican and Democrat candidates across five different decades and since the data will be measured over 36 months for each candidate, it can account for before an incumbent declares that they are running again. The data also includes cases where the incumbent lost such as Bush in 1992 and Carter in 1980 so we can compare the outcome and if that had any effect.
 
@@ -117,7 +123,8 @@ modelsummary::modelsummary(
   statistic = c("Standard Error. = {std.error}", 
                 "p-value = {p.value}"),
   gof_map = c("nobs", "r.squared", "adj.r.squared"),
-  coef_rename = c("(Intercept)" = "Approval Change")
+  coef_rename = c("(Intercept)" = "Approval Change"),
+  title = "Regression Output"
 )
 ```
 
@@ -173,7 +180,8 @@ modelsummary::modelsummary(
   statistic = c("Standard Error. = {std.error}", 
                 "p-value = {p.value}"),
   gof_map = c("nobs", "r.squared", "adj.r.squared"),
-  coef_rename = c("(Intercept)" = "Approval Change")
+  coef_rename = c("(Intercept)" = "Approval Change"),
+  title = "Regression Output for Democrats"
 )
 ```
 
@@ -222,10 +230,20 @@ modelsummary::modelsummary(
   statistic = c("Standard Error. = {std.error}", 
                 "p-value = {p.value}"),
   gof_map = c("nobs", "r.squared", "adj.r.squared"),
-  coef_rename = c("(Intercept)" = "Approval Change")
+  coef_rename = c("(Intercept)" = "Approval Change"),
+  title = "Regression Output for Republicans"
 )
 
 ```
+
+Analysis:
+
+As we can tell from the graphs, it appears that there is very little correlation between both Democrats and Republicans. To compare the two, we will look at the p-values, coefficients, and the R² values. 
+
+ As per the regression output for Democrat incumbents, the relationships examined are not statistically significant, with p-values well above the standard 0.05 threshold (0.614 for approval change and 0.500 for change %). The coefficients (-0.219 for approval change and 0.071 for change %) are weak, and the R² value of 0.004 indicates that the model explains almost none of the variation in approval ratings. Similarly, for Republican incumbents, the relationships are also not statistically significant, with p-values of 0.169 for approval change and 0.186 for change %. The coefficients (-0.890 for approval change and 0.205 for change %) suggest a stronger negative relationship compared to Democrats but remain inconclusive, with a low R² value of 0.025 showing minimal explanatory power. The results suggest that other factors play a much larger role in shaping approval ratings, though Republican incumbents display a slightly stronger (but still statistically insignificant) relationship.
+
+Now that we know that party doesn’t tell us much, let us look at arguably the most important factor: Whether a candidate won or not.
+
 
 
 
@@ -274,7 +292,8 @@ modelsummary::modelsummary(
   statistic = c("Standard Error. = {std.error}", 
                 "p-value = {p.value}"),
   gof_map = c("nobs", "r.squared", "adj.r.squared"),
-  coef_rename = c("(Intercept)" = "Approval Change")
+  coef_rename = c("(Intercept)" = "Approval Change"),
+  title = "Regression Output for Winning Candidates"
 )
 ```
 
@@ -327,7 +346,32 @@ modelsummary::modelsummary(
   statistic = c("Standard Error. = {std.error}", 
                 "p-value = {p.value}"),
   gof_map = c("nobs", "r.squared", "adj.r.squared"),
-  coef_rename = c("(Intercept)" = "Approval Change")
+  coef_rename = c("(Intercept)" = "Approval Change"),
+  title = "Regression Output for Losing Candidates"
 )
 ```
+
+
+Analysis:
+
+Once again, from the graphs, it appears that there is very little correlation between both candidates who won or lost their races. To confirm this and verify if there is a measurable difference, we will again compare the p-values, coefficients, and the R² value.
+
+As per the regression output for candidates who won their race, the relationships examined are not statistically significant, with p-values well above the standard 0.05 threshold (0.615 for approval change and 0.585 for change %). The coefficients (-0.226 for approval change and 0.062 for change %) are weak, and the R² value of 0.003 indicates that the model explains almost none of the variation in approval ratings. Similarly, for candidates who lost their race, the relationships are also not statistically significant, with p-values of 0.150 for approval change and 0.139 for change %. The coefficients (-0.904 for approval change and 0.209 for change %) suggest a stronger negative relationship compared to winners but remain inconclusive, with another low R² value of 0.031. The results suggest that other factors play a much larger role in shaping approval ratings, though candidates who lost their races display a slightly stronger (but still statistically insignificant) relationship.
+
+Now that we know that winning or losing doesn’t tell us much about the relationship between approval ratings and changes in the S&P 500, the relationship between the variables is made clearer, allowing us to come to an informed conclusion.
+
+
+
+
+
+
+Conclusion:
+
+
+Based on the data, we can conclude there is no clear relationship between the approval ratings of incumbent U.S. presidents running for the second term and the stock market performance during their first term, even when we look specifically at the party of the candidate and the election outcome as possible factors that may affect the relationship. Therefore the analysis and research do NOT support the hypothesis.
+
+While the data account for multiple periods, parties, and election results, the analysis is limited by the small sample size, as it does not include every president who ran for re-election. Another limitation is that we are measuring economic growth through performance which despite being generally accepted as a measure of economic performance, may not reflect the economic conditions of everyday Americans who would probably see inflation or employment rates as a better measure of the economy. A potential further analysis could be done by comparing the approval ratings to changes in Gross Domestic Product or inflation, which may better reflect the economy. Ultimately, the results suggest that approval ratings are influenced by a wide range of factors beyond economic performance alone.
+
+
+
 
