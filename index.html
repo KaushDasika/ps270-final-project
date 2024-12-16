@@ -115,7 +115,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["approval_vs_sp500.png","data/Presidential_Approval_Data.csv","data/SP500.csv","index_files/anchor-4.2.2/anchor.min.js","index_files/bowser-1.9.3/bowser.min.js","index_files/distill-2.2.21/template.v2.js","index_files/figure-html5/unnamed-chunk-1-1.png","index_files/figure-html5/unnamed-chunk-1-2.png","index_files/header-attrs-2.17/header-attrs.js","index_files/header-attrs-2.28/header-attrs.js","index_files/jquery-3.6.0/jquery-3.6.0.js","index_files/jquery-3.6.0/jquery-3.6.0.min.js","index_files/jquery-3.6.0/jquery-3.6.0.min.map","index_files/popper-2.6.0/popper.min.js","index_files/tippy-6.2.7/tippy-bundle.umd.min.js","index_files/tippy-6.2.7/tippy-light-border.css","index_files/tippy-6.2.7/tippy.css","index_files/tippy-6.2.7/tippy.umd.min.js","index_files/webcomponents-2.0.0/webcomponents.js","netapproval_vs_netsp500.png"]}
+  {"type":"character","attributes":{},"value":["approval_vs_sp500.png","data/Bush1SP500.csv","data/Bush2SP500.csv","data/CarterSP500.csv","data/ClintonSP500.csv","data/ObamaSP500.csv","data/PresApproval.csv","index_files/anchor-4.2.2/anchor.min.js","index_files/bowser-1.9.3/bowser.min.js","index_files/distill-2.2.21/template.v2.js","index_files/figure-html5/plot-all-1.png","index_files/figure-html5/plot-dems-1.png","index_files/figure-html5/plot-loss-1.png","index_files/figure-html5/plot-rep-1.png","index_files/figure-html5/plot-win-1.png","index_files/figure-html5/unnamed-chunk-1-1.png","index_files/figure-html5/unnamed-chunk-1-2.png","index_files/header-attrs-2.17/header-attrs.js","index_files/header-attrs-2.28/header-attrs.js","index_files/jquery-3.6.0/jquery-3.6.0.js","index_files/jquery-3.6.0/jquery-3.6.0.min.js","index_files/jquery-3.6.0/jquery-3.6.0.min.map","index_files/popper-2.6.0/popper.min.js","index_files/tippy-6.2.7/tippy-bundle.umd.min.js","index_files/tippy-6.2.7/tippy-light-border.css","index_files/tippy-6.2.7/tippy.css","index_files/tippy-6.2.7/tippy.umd.min.js","index_files/webcomponents-2.0.0/webcomponents.js","netapproval_vs_netsp500.png"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
   <!--/radix_placeholder_navigation_in_header-->
@@ -1497,7 +1497,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </script>
 
   <!--/radix_placeholder_distill-->
-  <script src="index_files/header-attrs-2.28/header-attrs.js"></script>
+  <script src="index_files/header-attrs-2.29/header-attrs.js"></script>
   <script src="index_files/jquery-3.6.0/jquery-3.6.0.min.js"></script>
   <script src="index_files/popper-2.6.0/popper.min.js"></script>
   <link href="index_files/tippy-6.2.7/tippy.css" rel="stylesheet" />
@@ -1545,70 +1545,544 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <div class="d-article">
 <h2 id="project-thoughts">Project thoughts</h2>
 <p>My research question for the Final Project is: How are the approval ratings of incumbent U.S. presidents running for the second term related to the stock market performance during their first term? My hypothesis is that higher stock market growth results in higher approval ratings going into a re-election.
-The hypothesis may be true as economic performance is a big talking point during elections and it makes sense that the voting public would be more receptive to the second term of a President that has shown economic growth. In this case, the variables of interest are the performance of the S&amp;P 500 index, which is usually used to measure and gauge the development of the U.S. economy, and the approval ratings of an incumbent President going into re-election taken from the Roper Center.
-The approval rating variable will be measured by taking multiple sources (to ensure the overall representation is as accurate as possible) and will be compared to the S&amp;P based on monthly changes in the index and approval ratings between the midterm and presidential elections (24 months). A pattern in the data that would prove my hypothesis is if positive and negative changes in the S&amp;P translate to approval ratings and since the data will be measured over 2 years, it can account for before an incumbent declares that they are running again.
+The hypothesis may be true as economic performance is a big talking point during elections and it makes sense that the voting public would be more receptive to the second term of a President that has shown economic growth. In this case, the variables of interest are the performance of the S&amp;P 500 index, which is usually used to measure and gauge the development of the U.S. economy, and the approval ratings of an incumbent President going into re-election taken from the Roper Center.</p>
+<p>The approval rating variable will be measured by taking multiple sources (to ensure the overall representation is as accurate as possible) and will be compared to the S&amp;P based on monthly changes in the index and approval ratings between the midterm and presidential elections (24 months). A pattern in the data that would prove my hypothesis is if positive and negative changes in the S&amp;P translate to approval ratings and since the data will be measured over 2 years, it can account for before an incumbent declares that they are running again.
 A pattern that would disprove is if there was no positive correlation on average across the 24-month period.</p>
-<p>The two graphs strongly suggest that there is no correlation between Presidential Approval Rating and the price of S&amp;P 500, at least under the Obama administration. I felt the Obama administration was a good choice to see if there was a correlation as there was the 2009 Recession and the 2010 and 2014 midterms where the Republicans had gains in the Senate, House and gubernatorial elections. The graph that compares the net changes of the S&amp;P and Approval ratings indicates there is no relationship between the variables. The secod graph is the best indicator of an absence of a relationship as in this graph we are comparing the net changes in the same month and there is still no clear relationship between variables. A way to improve on this study would be to take data from other Presidents in the past and compare. But it could be inferred that at least in the first half of 2010s there is no clear relationship between Presidential Approval ratings and the S&amp;P 500.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://readr.tidyverse.org'>readr</a></span><span class='op'>)</span></span>
 <span><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://tidyverse.tidyverse.org'>tidyverse</a></span><span class='op'>)</span></span>
 <span><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://dplyr.tidyverse.org'>dplyr</a></span><span class='op'>)</span></span>
 <span><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://ggplot2.tidyverse.org'>ggplot2</a></span><span class='op'>)</span></span>
+<span><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://yihui.org/knitr/'>knitr</a></span><span class='op'>)</span></span>
+<span><span class='fu'>knitr</span><span class='fu'>::</span><span class='va'><a href='https://rdrr.io/pkg/knitr/man/opts_chunk.html'>opts_chunk</a></span><span class='op'>$</span><span class='fu'>set</span><span class='op'>(</span>echo <span class='op'>=</span> <span class='cn'>TRUE</span>, fig.align <span class='op'>=</span> <span class='st'>'center'</span>, fig.width <span class='op'>=</span> <span class='fl'>8</span>, fig.height <span class='op'>=</span> <span class='fl'>6</span><span class='op'>)</span></span>
 <span></span>
-<span><span class='va'>pres</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://readr.tidyverse.org/reference/read_delim.html'>read_csv</a></span><span class='op'>(</span><span class='st'>"data/Presidential_Approval_Data.csv"</span><span class='op'>)</span></span>
-<span><span class='va'>SP</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://readr.tidyverse.org/reference/read_delim.html'>read_csv</a></span><span class='op'>(</span><span class='st'>"data/SP500.csv"</span><span class='op'>)</span></span>
+<span><span class='co'>#Approval Ratings Data</span></span>
+<span><span class='va'>presApproval</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://readr.tidyverse.org/reference/read_delim.html'>read_csv</a></span><span class='op'>(</span><span class='st'>"data/PresApproval.csv"</span><span class='op'>)</span></span>
+<span></span>
+<span><span class='va'>presApproval</span><span class='op'>$</span><span class='va'>Date</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://lubridate.tidyverse.org/reference/ymd.html'>dmy</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/paste.html'>paste</a></span><span class='op'>(</span><span class='st'>"01"</span>, <span class='va'>presApproval</span><span class='op'>$</span><span class='va'>Date</span><span class='op'>)</span><span class='op'>)</span> </span>
+<span><span class='va'>presApproval</span><span class='op'>$</span><span class='va'>Date</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/format.html'>format</a></span><span class='op'>(</span><span class='va'>presApproval</span><span class='op'>$</span><span class='va'>Date</span>, <span class='st'>"%m/%Y"</span><span class='op'>)</span></span>
+<span></span>
+<span><span class='co'>#S&amp;P 500 Data</span></span>
+<span><span class='va'>SPObama</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://readr.tidyverse.org/reference/read_delim.html'>read_csv</a></span><span class='op'>(</span><span class='st'>"data/ObamaSP500.csv"</span><span class='op'>)</span></span>
+<span><span class='va'>SPBush2</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://readr.tidyverse.org/reference/read_delim.html'>read_csv</a></span><span class='op'>(</span><span class='st'>"data/Bush2SP500.csv"</span><span class='op'>)</span></span>
+<span><span class='va'>SPClinton</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://readr.tidyverse.org/reference/read_delim.html'>read_csv</a></span><span class='op'>(</span><span class='st'>"data/ClintonSP500.csv"</span><span class='op'>)</span></span>
+<span><span class='va'>SPBush1</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://readr.tidyverse.org/reference/read_delim.html'>read_csv</a></span><span class='op'>(</span><span class='st'>"data/Bush1SP500.csv"</span><span class='op'>)</span></span>
+<span><span class='va'>SPCarter</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://readr.tidyverse.org/reference/read_delim.html'>read_csv</a></span><span class='op'>(</span><span class='st'>"data/CarterSP500.csv"</span><span class='op'>)</span></span>
+<span> </span>
+<span></span>
+<span><span class='va'>SPObama</span><span class='op'>$</span><span class='va'>Date</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://lubridate.tidyverse.org/reference/ymd.html'>mdy</a></span><span class='op'>(</span><span class='va'>SPObama</span><span class='op'>$</span><span class='va'>Date</span><span class='op'>)</span>           </span>
+<span><span class='va'>SPObama</span><span class='op'>$</span><span class='va'>Date</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/format.html'>format</a></span><span class='op'>(</span><span class='va'>SPObama</span><span class='op'>$</span><span class='va'>Date</span>, <span class='st'>"%m/%Y"</span><span class='op'>)</span></span>
+<span></span>
+<span><span class='va'>SPBush2</span><span class='op'>$</span><span class='va'>Date</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://lubridate.tidyverse.org/reference/ymd.html'>mdy</a></span><span class='op'>(</span><span class='va'>SPBush2</span><span class='op'>$</span><span class='va'>Date</span><span class='op'>)</span>           </span>
+<span><span class='va'>SPBush2</span><span class='op'>$</span><span class='va'>Date</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/format.html'>format</a></span><span class='op'>(</span><span class='va'>SPBush2</span><span class='op'>$</span><span class='va'>Date</span>, <span class='st'>"%m/%Y"</span><span class='op'>)</span></span>
+<span></span>
+<span><span class='va'>SPClinton</span><span class='op'>$</span><span class='va'>Date</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://lubridate.tidyverse.org/reference/ymd.html'>mdy</a></span><span class='op'>(</span><span class='va'>SPClinton</span><span class='op'>$</span><span class='va'>Date</span><span class='op'>)</span>           </span>
+<span><span class='va'>SPClinton</span><span class='op'>$</span><span class='va'>Date</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/format.html'>format</a></span><span class='op'>(</span><span class='va'>SPClinton</span><span class='op'>$</span><span class='va'>Date</span>, <span class='st'>"%m/%Y"</span><span class='op'>)</span></span>
+<span></span>
+<span><span class='va'>SPBush1</span><span class='op'>$</span><span class='va'>Date</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://lubridate.tidyverse.org/reference/ymd.html'>mdy</a></span><span class='op'>(</span><span class='va'>SPBush1</span><span class='op'>$</span><span class='va'>Date</span><span class='op'>)</span>           </span>
+<span><span class='va'>SPBush1</span><span class='op'>$</span><span class='va'>Date</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/format.html'>format</a></span><span class='op'>(</span><span class='va'>SPBush1</span><span class='op'>$</span><span class='va'>Date</span>, <span class='st'>"%m/%Y"</span><span class='op'>)</span></span>
+<span></span>
+<span><span class='va'>SPCarter</span><span class='op'>$</span><span class='va'>Date</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://lubridate.tidyverse.org/reference/ymd.html'>mdy</a></span><span class='op'>(</span><span class='va'>SPCarter</span><span class='op'>$</span><span class='va'>Date</span><span class='op'>)</span>           </span>
+<span><span class='va'>SPCarter</span><span class='op'>$</span><span class='va'>Date</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/format.html'>format</a></span><span class='op'>(</span><span class='va'>SPCarter</span><span class='op'>$</span><span class='va'>Date</span>, <span class='st'>"%m/%Y"</span><span class='op'>)</span></span>
 <span></span>
 <span></span>
+<span><span class='co'>#Merged Dataset</span></span>
+<span><span class='va'>SPTotal</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://dplyr.tidyverse.org/reference/bind_rows.html'>bind_rows</a></span><span class='op'>(</span><span class='va'>SPObama</span>, <span class='va'>SPBush2</span>, <span class='va'>SPClinton</span>, <span class='va'>SPBush1</span>, <span class='va'>SPCarter</span><span class='op'>)</span></span>
 <span></span>
-<span><span class='va'>pres</span> <span class='op'>&lt;-</span> <span class='va'>pres</span> <span class='op'>|&gt;</span> </span>
-<span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/mutate.html'>mutate</a></span><span class='op'>(</span>Month <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/character.html'>as.character</a></span><span class='op'>(</span><span class='va'>Month</span><span class='op'>)</span><span class='op'>)</span></span>
+<span><span class='va'>resultTotal</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://dplyr.tidyverse.org/reference/mutate-joins.html'>inner_join</a></span><span class='op'>(</span><span class='va'>presApproval</span>, <span class='va'>SPTotal</span>, by <span class='op'>=</span> <span class='st'>"Date"</span><span class='op'>)</span></span>
 <span></span>
-<span><span class='va'>SP</span> <span class='op'>&lt;-</span> <span class='va'>SP</span> <span class='op'>|&gt;</span></span>
-<span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/mutate.html'>mutate</a></span><span class='op'>(</span>Date <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/character.html'>as.character</a></span><span class='op'>(</span><span class='va'>Date</span><span class='op'>)</span><span class='op'>)</span></span>
-<span></span>
-<span></span>
-<span><span class='va'>SP</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://dplyr.tidyverse.org/reference/rename.html'>rename</a></span><span class='op'>(</span><span class='va'>SP</span>, Month <span class='op'>=</span> <span class='va'>Date</span><span class='op'>)</span></span>
-<span></span>
-<span></span>
-<span><span class='va'>result</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://dplyr.tidyverse.org/reference/mutate-joins.html'>inner_join</a></span><span class='op'>(</span><span class='va'>pres</span>, <span class='va'>SP</span>, by <span class='op'>=</span> <span class='st'>"Month"</span><span class='op'>)</span></span>
-<span></span>
-<span></span>
-<span><span class='va'>plot</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/ggplot.html'>ggplot</a></span><span class='op'>(</span>data <span class='op'>=</span> <span class='va'>result</span>, <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/aes.html'>aes</a></span><span class='op'>(</span>x <span class='op'>=</span> <span class='va'>Price</span>, y <span class='op'>=</span> <span class='va'>Approving</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span></span>
-<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/geom_point.html'>geom_point</a></span><span class='op'>(</span><span class='op'>)</span> <span class='op'>+</span> </span>
-<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/geom_smooth.html'>geom_smooth</a></span><span class='op'>(</span>se <span class='op'>=</span> <span class='cn'>FALSE</span><span class='op'>)</span> <span class='op'>+</span> </span>
-<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/labs.html'>labs</a></span><span class='op'>(</span></span>
-<span>    title <span class='op'>=</span> <span class='st'>"Obama Approval Ratings vs S&amp;P 500"</span>,</span>
-<span>    x <span class='op'>=</span> <span class='st'>"S&amp;P 500"</span>,</span>
-<span>    y <span class='op'>=</span> <span class='st'>"Approval %"</span>,</span>
-<span>    caption <span class='op'>=</span> <span class='st'>"Data Sources: American Presidency Project (Approval Ratings), S&amp;P 500"</span></span>
-<span>  <span class='op'>)</span> <span class='op'>+</span></span>
-<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/ggtheme.html'>theme_minimal</a></span><span class='op'>(</span><span class='op'>)</span> <span class='op'>+</span> </span>
-<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/scale_colour_discrete.html'>scale_color_discrete</a></span><span class='op'>(</span>name <span class='op'>=</span> <span class='st'>"Year/Term"</span><span class='op'>)</span></span>
-<span></span>
-<span><span class='va'>plot</span></span></code></pre>
-</div>
-<img src="index_files/figure-html5/unnamed-chunk-1-1.png" width="624" />
-<div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>result</span> <span class='op'>&lt;-</span> <span class='va'>result</span> <span class='op'>|&gt;</span></span>
+<span><span class='va'>resultTotal</span> <span class='op'>&lt;-</span> <span class='va'>resultTotal</span> <span class='op'>|&gt;</span></span>
 <span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/mutate.html'>mutate</a></span><span class='op'>(</span>`Change %` <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/numeric.html'>as.numeric</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/grep.html'>gsub</a></span><span class='op'>(</span><span class='st'>"%"</span>, <span class='st'>""</span>, <span class='va'>`Change %`</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span></span>
 <span></span>
-<span></span>
-<span><span class='va'>plot2</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/ggplot.html'>ggplot</a></span><span class='op'>(</span>data <span class='op'>=</span> <span class='va'>result</span>, <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/aes.html'>aes</a></span><span class='op'>(</span>x <span class='op'>=</span> <span class='va'>`Change %`</span>, y <span class='op'>=</span> <span class='va'>`Approval Change`</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span></span>
-<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/geom_point.html'>geom_point</a></span><span class='op'>(</span>size <span class='op'>=</span> <span class='fl'>2</span>, color <span class='op'>=</span> <span class='st'>"black"</span>, alpha <span class='op'>=</span> <span class='fl'>0.7</span><span class='op'>)</span> <span class='op'>+</span> </span>
-<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/geom_smooth.html'>geom_smooth</a></span><span class='op'>(</span>method <span class='op'>=</span> <span class='st'>"lm"</span>, se <span class='op'>=</span> <span class='cn'>FALSE</span>, color <span class='op'>=</span> <span class='st'>"blue"</span>, size <span class='op'>=</span> <span class='fl'>1</span><span class='op'>)</span> <span class='op'>+</span></span>
+<span><span class='co'># Net Approval vs S&amp;P 500 for all</span></span>
+<span><span class='va'>plotAll</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/ggplot.html'>ggplot</a></span><span class='op'>(</span>data <span class='op'>=</span> <span class='va'>resultTotal</span>, <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/aes.html'>aes</a></span><span class='op'>(</span>x <span class='op'>=</span> <span class='va'>`Change %`</span>, y <span class='op'>=</span> <span class='va'>`Change`</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span></span>
+<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/geom_point.html'>geom_point</a></span><span class='op'>(</span>size <span class='op'>=</span> <span class='fl'>3</span>, color <span class='op'>=</span> <span class='st'>"black"</span>, alpha <span class='op'>=</span> <span class='fl'>0.8</span><span class='op'>)</span> <span class='op'>+</span> </span>
+<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/geom_smooth.html'>geom_smooth</a></span><span class='op'>(</span>method <span class='op'>=</span> <span class='st'>"lm"</span>, se <span class='op'>=</span> <span class='cn'>TRUE</span>, color <span class='op'>=</span> <span class='st'>"blue"</span>, size <span class='op'>=</span> <span class='fl'>1</span>, linetype <span class='op'>=</span> <span class='st'>"dashed"</span><span class='op'>)</span> <span class='op'>+</span></span>
 <span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/labs.html'>labs</a></span><span class='op'>(</span></span>
-<span>    title <span class='op'>=</span> <span class='st'>"Approval Change vs. S&amp;P 500 Change %"</span>,</span>
+<span>    title <span class='op'>=</span> <span class='st'>"Approval Change vs. S&amp;P 500 Change (%)"</span>,</span>
 <span>    x <span class='op'>=</span> <span class='st'>"S&amp;P 500 Change (%)"</span>,</span>
 <span>    y <span class='op'>=</span> <span class='st'>"Approval Change"</span>,</span>
 <span>    caption <span class='op'>=</span> <span class='st'>"Data Sources: American Presidency Project (Approval Ratings), S&amp;P 500"</span></span>
 <span>  <span class='op'>)</span> <span class='op'>+</span></span>
-<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/ggtheme.html'>theme_minimal</a></span><span class='op'>(</span>base_size <span class='op'>=</span> <span class='fl'>14</span><span class='op'>)</span></span>
-<span></span>
-<span></span>
-<span><span class='va'>plot2</span></span></code></pre>
+<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/scale_viridis.html'>scale_color_viridis_c</a></span><span class='op'>(</span><span class='op'>)</span> <span class='op'>+</span></span>
+<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/ggtheme.html'>theme_minimal</a></span><span class='op'>(</span>base_size <span class='op'>=</span> <span class='fl'>14</span><span class='op'>)</span> <span class='op'>+</span></span>
+<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/theme.html'>theme</a></span><span class='op'>(</span></span>
+<span>    panel.grid.major <span class='op'>=</span> <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/element.html'>element_line</a></span><span class='op'>(</span>color <span class='op'>=</span> <span class='st'>"gray80"</span><span class='op'>)</span>,</span>
+<span>    panel.grid.minor <span class='op'>=</span> <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/element.html'>element_line</a></span><span class='op'>(</span>color <span class='op'>=</span> <span class='st'>"gray90"</span><span class='op'>)</span>,</span>
+<span>    plot.title <span class='op'>=</span> <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/element.html'>element_text</a></span><span class='op'>(</span>face <span class='op'>=</span> <span class='st'>"bold"</span>, hjust <span class='op'>=</span> <span class='fl'>0.5</span><span class='op'>)</span>,</span>
+<span>    plot.subtitle <span class='op'>=</span> <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/element.html'>element_text</a></span><span class='op'>(</span>hjust <span class='op'>=</span> <span class='fl'>0.5</span><span class='op'>)</span>,</span>
+<span>    plot.caption <span class='op'>=</span> <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/element.html'>element_text</a></span><span class='op'>(</span>hjust <span class='op'>=</span> <span class='fl'>1</span><span class='op'>)</span></span>
+<span>  <span class='op'>)</span></span></code></pre>
 </div>
-<p><img src="index_files/figure-html5/unnamed-chunk-1-2.png" width="624" /></p>
+</div>
+<div class="layout-chunk" data-layout="l-body">
+<p><img src="index_files/figure-html5/plot-all-1.png" width="768" style="display: block; margin: auto;" /></p>
+</div>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>all</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/lm.html'>lm</a></span><span class='op'>(</span><span class='va'>Change</span> <span class='op'>~</span> <span class='va'>`Change %`</span>, data <span class='op'>=</span> <span class='va'>resultTotal</span><span class='op'>)</span></span>
+<span></span>
+<span><span class='fu'>modelsummary</span><span class='fu'>::</span><span class='fu'><a href='https://modelsummary.com/man/modelsummary.html'>modelsummary</a></span><span class='op'>(</span></span>
+<span>  <span class='va'>all</span>,</span>
+<span>  statistic <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"Standard Error. = {std.error}"</span>, </span>
+<span>                <span class='st'>"p-value = {p.value}"</span><span class='op'>)</span>,</span>
+<span>  gof_map <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"nobs"</span>, <span class='st'>"r.squared"</span>, <span class='st'>"adj.r.squared"</span><span class='op'>)</span>,</span>
+<span>  coef_rename <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"(Intercept)"</span> <span class='op'>=</span> <span class='st'>"Approval Change"</span><span class='op'>)</span></span>
+<span><span class='op'>)</span></span></code></pre>
+</div>
+<table style="width:61%;">
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 36%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th><ol type="1">
+<li></li>
+</ol></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Approval Change</td>
+<td>-0.520</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>Standard Error. = 0.365</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>p-value = 0.155</td>
+</tr>
+<tr class="even">
+<td>Change %</td>
+<td>0.134</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>Standard Error. = 0.088</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>p-value = 0.129</td>
+</tr>
+<tr class="odd">
+<td>Num.Obs.</td>
+<td>179</td>
+</tr>
+<tr class="even">
+<td>R2</td>
+<td>0.013</td>
+</tr>
+<tr class="odd">
+<td>R2 Adj.</td>
+<td>0.007</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='co'># Democrats</span></span>
+<span></span>
+<span><span class='va'>SPDems</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://dplyr.tidyverse.org/reference/bind_rows.html'>bind_rows</a></span><span class='op'>(</span><span class='va'>SPObama</span>, <span class='va'>SPClinton</span>, <span class='va'>SPCarter</span><span class='op'>)</span></span>
+<span></span>
+<span><span class='va'>resultDems</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://dplyr.tidyverse.org/reference/mutate-joins.html'>inner_join</a></span><span class='op'>(</span><span class='va'>presApproval</span>, <span class='va'>SPDems</span>, by <span class='op'>=</span> <span class='st'>"Date"</span><span class='op'>)</span></span>
+<span></span>
+<span><span class='va'>resultDems</span> <span class='op'>&lt;-</span> <span class='va'>resultDems</span> <span class='op'>|&gt;</span></span>
+<span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/mutate.html'>mutate</a></span><span class='op'>(</span>`Change %` <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/numeric.html'>as.numeric</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/grep.html'>gsub</a></span><span class='op'>(</span><span class='st'>"%"</span>, <span class='st'>""</span>, <span class='va'>`Change %`</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span></span>
+<span></span>
+<span><span class='co'>#Graph</span></span>
+<span><span class='va'>plotDems</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/ggplot.html'>ggplot</a></span><span class='op'>(</span>data <span class='op'>=</span> <span class='va'>resultDems</span>, <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/aes.html'>aes</a></span><span class='op'>(</span>x <span class='op'>=</span> <span class='va'>`Change %`</span>, y <span class='op'>=</span> <span class='va'>`Change`</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span></span>
+<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/geom_point.html'>geom_point</a></span><span class='op'>(</span>size <span class='op'>=</span> <span class='fl'>3</span>, color <span class='op'>=</span> <span class='st'>"black"</span>, alpha <span class='op'>=</span> <span class='fl'>0.8</span><span class='op'>)</span> <span class='op'>+</span> </span>
+<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/geom_smooth.html'>geom_smooth</a></span><span class='op'>(</span>method <span class='op'>=</span> <span class='st'>"lm"</span>, se <span class='op'>=</span> <span class='cn'>TRUE</span>, color <span class='op'>=</span> <span class='st'>"blue"</span>, size <span class='op'>=</span> <span class='fl'>1</span>, linetype <span class='op'>=</span> <span class='st'>"dashed"</span><span class='op'>)</span> <span class='op'>+</span></span>
+<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/labs.html'>labs</a></span><span class='op'>(</span></span>
+<span>    title <span class='op'>=</span> <span class='st'>"Approval Change vs. S&amp;P 500 Change (%) [Democrat Incumbent]"</span>,</span>
+<span>    x <span class='op'>=</span> <span class='st'>"S&amp;P 500 Change (%)"</span>,</span>
+<span>    y <span class='op'>=</span> <span class='st'>"Approval Change"</span>,</span>
+<span>    caption <span class='op'>=</span> <span class='st'>"Data Sources: American Presidency Project (Approval Ratings), S&amp;P 500"</span></span>
+<span>  <span class='op'>)</span> <span class='op'>+</span></span>
+<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/scale_viridis.html'>scale_color_viridis_c</a></span><span class='op'>(</span><span class='op'>)</span> <span class='op'>+</span></span>
+<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/ggtheme.html'>theme_minimal</a></span><span class='op'>(</span>base_size <span class='op'>=</span> <span class='fl'>14</span><span class='op'>)</span> <span class='op'>+</span></span>
+<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/theme.html'>theme</a></span><span class='op'>(</span></span>
+<span>    panel.grid.major <span class='op'>=</span> <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/element.html'>element_line</a></span><span class='op'>(</span>color <span class='op'>=</span> <span class='st'>"gray80"</span><span class='op'>)</span>,</span>
+<span>    panel.grid.minor <span class='op'>=</span> <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/element.html'>element_line</a></span><span class='op'>(</span>color <span class='op'>=</span> <span class='st'>"gray90"</span><span class='op'>)</span>,</span>
+<span>    plot.title <span class='op'>=</span> <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/element.html'>element_text</a></span><span class='op'>(</span>face <span class='op'>=</span> <span class='st'>"bold"</span>, hjust <span class='op'>=</span> <span class='fl'>0.5</span><span class='op'>)</span>,</span>
+<span>    plot.subtitle <span class='op'>=</span> <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/element.html'>element_text</a></span><span class='op'>(</span>hjust <span class='op'>=</span> <span class='fl'>0.5</span><span class='op'>)</span>,</span>
+<span>    plot.caption <span class='op'>=</span> <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/element.html'>element_text</a></span><span class='op'>(</span>hjust <span class='op'>=</span> <span class='fl'>1</span><span class='op'>)</span></span>
+<span>  <span class='op'>)</span></span></code></pre>
+</div>
+</div>
+<div class="layout-chunk" data-layout="l-body">
+<p><img src="index_files/figure-html5/plot-dems-1.png" width="768" style="display: block; margin: auto;" /></p>
+</div>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>dems</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/lm.html'>lm</a></span><span class='op'>(</span><span class='va'>Change</span> <span class='op'>~</span> <span class='va'>`Change %`</span>, data <span class='op'>=</span> <span class='va'>resultDems</span><span class='op'>)</span></span>
+<span></span>
+<span><span class='fu'>modelsummary</span><span class='fu'>::</span><span class='fu'><a href='https://modelsummary.com/man/modelsummary.html'>modelsummary</a></span><span class='op'>(</span></span>
+<span>  <span class='va'>dems</span>,</span>
+<span>  statistic <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"Standard Error. = {std.error}"</span>, </span>
+<span>                <span class='st'>"p-value = {p.value}"</span><span class='op'>)</span>,</span>
+<span>  gof_map <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"nobs"</span>, <span class='st'>"r.squared"</span>, <span class='st'>"adj.r.squared"</span><span class='op'>)</span>,</span>
+<span>  coef_rename <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"(Intercept)"</span> <span class='op'>=</span> <span class='st'>"Approval Change"</span><span class='op'>)</span></span>
+<span><span class='op'>)</span></span></code></pre>
+</div>
+<table style="width:61%;">
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 36%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th><ol type="1">
+<li></li>
+</ol></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Approval Change</td>
+<td>-0.219</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>Standard Error. = 0.434</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>p-value = 0.614</td>
+</tr>
+<tr class="even">
+<td>Change %</td>
+<td>0.071</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>Standard Error. = 0.105</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>p-value = 0.500</td>
+</tr>
+<tr class="odd">
+<td>Num.Obs.</td>
+<td>107</td>
+</tr>
+<tr class="even">
+<td>R2</td>
+<td>0.004</td>
+</tr>
+<tr class="odd">
+<td>R2 Adj.</td>
+<td>-0.005</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='co'># Republicans</span></span>
+<span></span>
+<span><span class='va'>SPRep</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://dplyr.tidyverse.org/reference/bind_rows.html'>bind_rows</a></span><span class='op'>(</span><span class='va'>SPBush1</span>, <span class='va'>SPBush2</span><span class='op'>)</span></span>
+<span></span>
+<span><span class='va'>resultRep</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://dplyr.tidyverse.org/reference/mutate-joins.html'>inner_join</a></span><span class='op'>(</span><span class='va'>presApproval</span>, <span class='va'>SPRep</span>, by <span class='op'>=</span> <span class='st'>"Date"</span><span class='op'>)</span></span>
+<span></span>
+<span><span class='va'>resultRep</span> <span class='op'>&lt;-</span> <span class='va'>resultRep</span> <span class='op'>|&gt;</span></span>
+<span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/mutate.html'>mutate</a></span><span class='op'>(</span>`Change %` <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/numeric.html'>as.numeric</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/grep.html'>gsub</a></span><span class='op'>(</span><span class='st'>"%"</span>, <span class='st'>""</span>, <span class='va'>`Change %`</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span></span>
+<span></span>
+<span><span class='co'>#Graph</span></span>
+<span><span class='va'>plotRep</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/ggplot.html'>ggplot</a></span><span class='op'>(</span>data <span class='op'>=</span> <span class='va'>resultRep</span>, <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/aes.html'>aes</a></span><span class='op'>(</span>x <span class='op'>=</span> <span class='va'>`Change %`</span>, y <span class='op'>=</span> <span class='va'>`Change`</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span></span>
+<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/geom_point.html'>geom_point</a></span><span class='op'>(</span>size <span class='op'>=</span> <span class='fl'>3</span>, color <span class='op'>=</span> <span class='st'>"black"</span>, alpha <span class='op'>=</span> <span class='fl'>0.8</span><span class='op'>)</span> <span class='op'>+</span> </span>
+<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/geom_smooth.html'>geom_smooth</a></span><span class='op'>(</span>method <span class='op'>=</span> <span class='st'>"lm"</span>, se <span class='op'>=</span> <span class='cn'>TRUE</span>, color <span class='op'>=</span> <span class='st'>"blue"</span>, size <span class='op'>=</span> <span class='fl'>1</span>, linetype <span class='op'>=</span> <span class='st'>"dashed"</span><span class='op'>)</span> <span class='op'>+</span></span>
+<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/labs.html'>labs</a></span><span class='op'>(</span></span>
+<span>    title <span class='op'>=</span> <span class='st'>"Approval Change vs. S&amp;P 500 Change (%) [Republican Incumbent]"</span>,</span>
+<span>    x <span class='op'>=</span> <span class='st'>"S&amp;P 500 Change (%)"</span>,</span>
+<span>    y <span class='op'>=</span> <span class='st'>"Approval Change"</span>,</span>
+<span>    caption <span class='op'>=</span> <span class='st'>"Data Sources: American Presidency Project (Approval Ratings), S&amp;P 500"</span></span>
+<span>  <span class='op'>)</span> <span class='op'>+</span></span>
+<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/scale_viridis.html'>scale_color_viridis_c</a></span><span class='op'>(</span><span class='op'>)</span> <span class='op'>+</span></span>
+<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/ggtheme.html'>theme_minimal</a></span><span class='op'>(</span>base_size <span class='op'>=</span> <span class='fl'>14</span><span class='op'>)</span> <span class='op'>+</span></span>
+<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/theme.html'>theme</a></span><span class='op'>(</span></span>
+<span>    panel.grid.major <span class='op'>=</span> <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/element.html'>element_line</a></span><span class='op'>(</span>color <span class='op'>=</span> <span class='st'>"gray80"</span><span class='op'>)</span>,</span>
+<span>    panel.grid.minor <span class='op'>=</span> <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/element.html'>element_line</a></span><span class='op'>(</span>color <span class='op'>=</span> <span class='st'>"gray90"</span><span class='op'>)</span>,</span>
+<span>    plot.title <span class='op'>=</span> <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/element.html'>element_text</a></span><span class='op'>(</span>face <span class='op'>=</span> <span class='st'>"bold"</span>, hjust <span class='op'>=</span> <span class='fl'>0.5</span><span class='op'>)</span>,</span>
+<span>    plot.subtitle <span class='op'>=</span> <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/element.html'>element_text</a></span><span class='op'>(</span>hjust <span class='op'>=</span> <span class='fl'>0.5</span><span class='op'>)</span>,</span>
+<span>    plot.caption <span class='op'>=</span> <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/element.html'>element_text</a></span><span class='op'>(</span>hjust <span class='op'>=</span> <span class='fl'>1</span><span class='op'>)</span></span>
+<span>  <span class='op'>)</span></span></code></pre>
+</div>
+</div>
+<div class="layout-chunk" data-layout="l-body">
+<p><img src="index_files/figure-html5/plot-rep-1.png" width="768" style="display: block; margin: auto;" /></p>
+</div>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>reps</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/lm.html'>lm</a></span><span class='op'>(</span><span class='va'>Change</span> <span class='op'>~</span> <span class='va'>`Change %`</span>, data <span class='op'>=</span> <span class='va'>resultRep</span><span class='op'>)</span></span>
+<span></span>
+<span><span class='fu'>modelsummary</span><span class='fu'>::</span><span class='fu'><a href='https://modelsummary.com/man/modelsummary.html'>modelsummary</a></span><span class='op'>(</span></span>
+<span>  <span class='va'>reps</span>,</span>
+<span>  statistic <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"Standard Error. = {std.error}"</span>, </span>
+<span>                <span class='st'>"p-value = {p.value}"</span><span class='op'>)</span>,</span>
+<span>  gof_map <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"nobs"</span>, <span class='st'>"r.squared"</span>, <span class='st'>"adj.r.squared"</span><span class='op'>)</span>,</span>
+<span>  coef_rename <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"(Intercept)"</span> <span class='op'>=</span> <span class='st'>"Approval Change"</span><span class='op'>)</span></span>
+<span><span class='op'>)</span></span></code></pre>
+</div>
+<table style="width:61%;">
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 36%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th><ol type="1">
+<li></li>
+</ol></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Approval Change</td>
+<td>-0.890</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>Standard Error. = 0.641</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>p-value = 0.169</td>
+</tr>
+<tr class="even">
+<td>Change %</td>
+<td>0.205</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>Standard Error. = 0.154</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>p-value = 0.186</td>
+</tr>
+<tr class="odd">
+<td>Num.Obs.</td>
+<td>72</td>
+</tr>
+<tr class="even">
+<td>R2</td>
+<td>0.025</td>
+</tr>
+<tr class="odd">
+<td>R2 Adj.</td>
+<td>0.011</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='co'># Election Result = Win</span></span>
+<span></span>
+<span><span class='va'>SPWin</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://dplyr.tidyverse.org/reference/bind_rows.html'>bind_rows</a></span><span class='op'>(</span><span class='va'>SPObama</span>, <span class='va'>SPBush1</span>, <span class='va'>SPClinton</span><span class='op'>)</span></span>
+<span></span>
+<span><span class='va'>resultWin</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://dplyr.tidyverse.org/reference/mutate-joins.html'>inner_join</a></span><span class='op'>(</span><span class='va'>presApproval</span>, <span class='va'>SPWin</span>, by <span class='op'>=</span> <span class='st'>"Date"</span><span class='op'>)</span></span>
+<span></span>
+<span><span class='va'>resultWin</span> <span class='op'>&lt;-</span> <span class='va'>resultWin</span> <span class='op'>|&gt;</span></span>
+<span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/mutate.html'>mutate</a></span><span class='op'>(</span>`Change %` <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/numeric.html'>as.numeric</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/grep.html'>gsub</a></span><span class='op'>(</span><span class='st'>"%"</span>, <span class='st'>""</span>, <span class='va'>`Change %`</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span></span>
+<span></span>
+<span><span class='co'>#Graph</span></span>
+<span><span class='va'>plotWin</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/ggplot.html'>ggplot</a></span><span class='op'>(</span>data <span class='op'>=</span> <span class='va'>resultWin</span>, <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/aes.html'>aes</a></span><span class='op'>(</span>x <span class='op'>=</span> <span class='va'>`Change %`</span>, y <span class='op'>=</span> <span class='va'>`Change`</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span></span>
+<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/geom_point.html'>geom_point</a></span><span class='op'>(</span>size <span class='op'>=</span> <span class='fl'>3</span>, color <span class='op'>=</span> <span class='st'>"black"</span>, alpha <span class='op'>=</span> <span class='fl'>0.8</span><span class='op'>)</span> <span class='op'>+</span> </span>
+<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/geom_smooth.html'>geom_smooth</a></span><span class='op'>(</span>method <span class='op'>=</span> <span class='st'>"lm"</span>, se <span class='op'>=</span> <span class='cn'>TRUE</span>, color <span class='op'>=</span> <span class='st'>"blue"</span>, size <span class='op'>=</span> <span class='fl'>1</span>, linetype <span class='op'>=</span> <span class='st'>"dashed"</span><span class='op'>)</span> <span class='op'>+</span></span>
+<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/labs.html'>labs</a></span><span class='op'>(</span></span>
+<span>    title <span class='op'>=</span> <span class='st'>"Approval Change vs. S&amp;P 500 Change (%) [Won Re-election]"</span>,</span>
+<span>    x <span class='op'>=</span> <span class='st'>"S&amp;P 500 Change (%)"</span>,</span>
+<span>    y <span class='op'>=</span> <span class='st'>"Approval Change"</span>,</span>
+<span>    caption <span class='op'>=</span> <span class='st'>"Data Sources: American Presidency Project (Approval Ratings), S&amp;P 500"</span></span>
+<span>  <span class='op'>)</span> <span class='op'>+</span></span>
+<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/scale_viridis.html'>scale_color_viridis_c</a></span><span class='op'>(</span><span class='op'>)</span> <span class='op'>+</span></span>
+<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/ggtheme.html'>theme_minimal</a></span><span class='op'>(</span>base_size <span class='op'>=</span> <span class='fl'>14</span><span class='op'>)</span> <span class='op'>+</span></span>
+<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/theme.html'>theme</a></span><span class='op'>(</span></span>
+<span>    panel.grid.major <span class='op'>=</span> <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/element.html'>element_line</a></span><span class='op'>(</span>color <span class='op'>=</span> <span class='st'>"gray80"</span><span class='op'>)</span>,</span>
+<span>    panel.grid.minor <span class='op'>=</span> <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/element.html'>element_line</a></span><span class='op'>(</span>color <span class='op'>=</span> <span class='st'>"gray90"</span><span class='op'>)</span>,</span>
+<span>    plot.title <span class='op'>=</span> <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/element.html'>element_text</a></span><span class='op'>(</span>face <span class='op'>=</span> <span class='st'>"bold"</span>, hjust <span class='op'>=</span> <span class='fl'>0.5</span><span class='op'>)</span>,</span>
+<span>    plot.subtitle <span class='op'>=</span> <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/element.html'>element_text</a></span><span class='op'>(</span>hjust <span class='op'>=</span> <span class='fl'>0.5</span><span class='op'>)</span>,</span>
+<span>    plot.caption <span class='op'>=</span> <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/element.html'>element_text</a></span><span class='op'>(</span>hjust <span class='op'>=</span> <span class='fl'>1</span><span class='op'>)</span></span>
+<span>  <span class='op'>)</span></span></code></pre>
+</div>
+</div>
+<div class="layout-chunk" data-layout="l-body">
+<p><img src="index_files/figure-html5/plot-win-1.png" width="768" style="display: block; margin: auto;" /></p>
+</div>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>win</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/lm.html'>lm</a></span><span class='op'>(</span><span class='va'>Change</span> <span class='op'>~</span> <span class='va'>`Change %`</span>, data <span class='op'>=</span> <span class='va'>resultWin</span><span class='op'>)</span></span>
+<span></span>
+<span><span class='fu'>modelsummary</span><span class='fu'>::</span><span class='fu'><a href='https://modelsummary.com/man/modelsummary.html'>modelsummary</a></span><span class='op'>(</span></span>
+<span>  <span class='va'>reps</span>,</span>
+<span>  statistic <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"Standard Error. = {std.error}"</span>, </span>
+<span>                <span class='st'>"p-value = {p.value}"</span><span class='op'>)</span>,</span>
+<span>  gof_map <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"nobs"</span>, <span class='st'>"r.squared"</span>, <span class='st'>"adj.r.squared"</span><span class='op'>)</span>,</span>
+<span>  coef_rename <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"(Intercept)"</span> <span class='op'>=</span> <span class='st'>"Approval Change"</span><span class='op'>)</span></span>
+<span><span class='op'>)</span></span></code></pre>
+</div>
+<table style="width:61%;">
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 36%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th><ol type="1">
+<li></li>
+</ol></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Approval Change</td>
+<td>-0.890</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>Standard Error. = 0.641</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>p-value = 0.169</td>
+</tr>
+<tr class="even">
+<td>Change %</td>
+<td>0.205</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>Standard Error. = 0.154</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>p-value = 0.186</td>
+</tr>
+<tr class="odd">
+<td>Num.Obs.</td>
+<td>72</td>
+</tr>
+<tr class="even">
+<td>R2</td>
+<td>0.025</td>
+</tr>
+<tr class="odd">
+<td>R2 Adj.</td>
+<td>0.011</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='co'># Election Result = Loss</span></span>
+<span></span>
+<span><span class='va'>SPLoss</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://dplyr.tidyverse.org/reference/bind_rows.html'>bind_rows</a></span><span class='op'>(</span><span class='va'>SPBush2</span>, <span class='va'>SPCarter</span><span class='op'>)</span></span>
+<span></span>
+<span><span class='va'>resultLoss</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://dplyr.tidyverse.org/reference/mutate-joins.html'>inner_join</a></span><span class='op'>(</span><span class='va'>presApproval</span>, <span class='va'>SPLoss</span>, by <span class='op'>=</span> <span class='st'>"Date"</span><span class='op'>)</span></span>
+<span></span>
+<span><span class='va'>resultLoss</span> <span class='op'>&lt;-</span> <span class='va'>resultLoss</span> <span class='op'>|&gt;</span></span>
+<span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/mutate.html'>mutate</a></span><span class='op'>(</span>`Change %` <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/numeric.html'>as.numeric</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/grep.html'>gsub</a></span><span class='op'>(</span><span class='st'>"%"</span>, <span class='st'>""</span>, <span class='va'>`Change %`</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span></span>
+<span></span>
+<span><span class='co'>#Graph</span></span>
+<span><span class='va'>plotLoss</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/ggplot.html'>ggplot</a></span><span class='op'>(</span>data <span class='op'>=</span> <span class='va'>resultLoss</span>, <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/aes.html'>aes</a></span><span class='op'>(</span>x <span class='op'>=</span> <span class='va'>`Change %`</span>, y <span class='op'>=</span> <span class='va'>`Change`</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span></span>
+<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/geom_point.html'>geom_point</a></span><span class='op'>(</span>size <span class='op'>=</span> <span class='fl'>3</span>, color <span class='op'>=</span> <span class='st'>"black"</span>, alpha <span class='op'>=</span> <span class='fl'>0.8</span><span class='op'>)</span> <span class='op'>+</span> </span>
+<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/geom_smooth.html'>geom_smooth</a></span><span class='op'>(</span>method <span class='op'>=</span> <span class='st'>"lm"</span>, se <span class='op'>=</span> <span class='cn'>TRUE</span>, color <span class='op'>=</span> <span class='st'>"blue"</span>, size <span class='op'>=</span> <span class='fl'>1</span>, linetype <span class='op'>=</span> <span class='st'>"dashed"</span><span class='op'>)</span> <span class='op'>+</span></span>
+<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/labs.html'>labs</a></span><span class='op'>(</span></span>
+<span>    title <span class='op'>=</span> <span class='st'>"Approval Change vs. S&amp;P 500 Change (%) [Lost Re-election]"</span>,</span>
+<span>    x <span class='op'>=</span> <span class='st'>"S&amp;P 500 Change (%)"</span>,</span>
+<span>    y <span class='op'>=</span> <span class='st'>"Approval Change"</span>,</span>
+<span>    caption <span class='op'>=</span> <span class='st'>"Data Sources: American Presidency Project (Approval Ratings), S&amp;P 500"</span></span>
+<span>  <span class='op'>)</span> <span class='op'>+</span></span>
+<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/scale_viridis.html'>scale_color_viridis_c</a></span><span class='op'>(</span><span class='op'>)</span> <span class='op'>+</span></span>
+<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/ggtheme.html'>theme_minimal</a></span><span class='op'>(</span>base_size <span class='op'>=</span> <span class='fl'>14</span><span class='op'>)</span> <span class='op'>+</span></span>
+<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/theme.html'>theme</a></span><span class='op'>(</span></span>
+<span>    panel.grid.major <span class='op'>=</span> <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/element.html'>element_line</a></span><span class='op'>(</span>color <span class='op'>=</span> <span class='st'>"gray80"</span><span class='op'>)</span>,</span>
+<span>    panel.grid.minor <span class='op'>=</span> <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/element.html'>element_line</a></span><span class='op'>(</span>color <span class='op'>=</span> <span class='st'>"gray90"</span><span class='op'>)</span>,</span>
+<span>    plot.title <span class='op'>=</span> <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/element.html'>element_text</a></span><span class='op'>(</span>face <span class='op'>=</span> <span class='st'>"bold"</span>, hjust <span class='op'>=</span> <span class='fl'>0.5</span><span class='op'>)</span>,</span>
+<span>    plot.subtitle <span class='op'>=</span> <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/element.html'>element_text</a></span><span class='op'>(</span>hjust <span class='op'>=</span> <span class='fl'>0.5</span><span class='op'>)</span>,</span>
+<span>    plot.caption <span class='op'>=</span> <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/element.html'>element_text</a></span><span class='op'>(</span>hjust <span class='op'>=</span> <span class='fl'>1</span><span class='op'>)</span></span>
+<span>  <span class='op'>)</span></span></code></pre>
+</div>
+</div>
+<div class="layout-chunk" data-layout="l-body">
+<p><img src="index_files/figure-html5/plot-loss-1.png" width="768" style="display: block; margin: auto;" /></p>
+</div>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>loss</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/lm.html'>lm</a></span><span class='op'>(</span><span class='va'>Change</span> <span class='op'>~</span> <span class='va'>`Change %`</span>, data <span class='op'>=</span> <span class='va'>resultLoss</span><span class='op'>)</span></span>
+<span></span>
+<span><span class='fu'>modelsummary</span><span class='fu'>::</span><span class='fu'><a href='https://modelsummary.com/man/modelsummary.html'>modelsummary</a></span><span class='op'>(</span></span>
+<span>  <span class='va'>reps</span>,</span>
+<span>  statistic <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"Standard Error. = {std.error}"</span>, </span>
+<span>                <span class='st'>"p-value = {p.value}"</span><span class='op'>)</span>,</span>
+<span>  gof_map <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"nobs"</span>, <span class='st'>"r.squared"</span>, <span class='st'>"adj.r.squared"</span><span class='op'>)</span>,</span>
+<span>  coef_rename <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"(Intercept)"</span> <span class='op'>=</span> <span class='st'>"Approval Change"</span><span class='op'>)</span></span>
+<span><span class='op'>)</span></span></code></pre>
+</div>
+<table style="width:61%;">
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 36%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th><ol type="1">
+<li></li>
+</ol></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Approval Change</td>
+<td>-0.890</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>Standard Error. = 0.641</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>p-value = 0.169</td>
+</tr>
+<tr class="even">
+<td>Change %</td>
+<td>0.205</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>Standard Error. = 0.154</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>p-value = 0.186</td>
+</tr>
+<tr class="odd">
+<td>Num.Obs.</td>
+<td>72</td>
+</tr>
+<tr class="even">
+<td>R2</td>
+<td>0.025</td>
+</tr>
+<tr class="odd">
+<td>R2 Adj.</td>
+<td>0.011</td>
+</tr>
+</tbody>
+</table>
 </div>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
