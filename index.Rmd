@@ -138,14 +138,27 @@ plotDems <- ggplot(data = resultDems, aes(x = `Change %`, y = `Change`)) +
     plot.subtitle = element_text(hjust = 0.5),
     plot.caption = element_text(hjust = 1)
   )
+```
 
+```{r plot-dems, echo=FALSE, fig.width=8, fig.height=6, fig.align='center'}
+print(plotDems)
+```
 
-plotDems
-
+```{r}
 dems <- lm(Change ~ `Change %`, data = resultDems)
-summary(dems)
+
+modelsummary::modelsummary(
+  dems,
+  statistic = c("Standard Error. = {std.error}", 
+                "p-value = {p.value}"),
+  gof_map = c("nobs", "r.squared", "adj.r.squared"),
+  coef_rename = c("(Intercept)" = "Approval Change")
+)
+```
 
 
+
+```{r}
 # Republicans
 
 SPRep <- bind_rows(SPBush1, SPBush2)
@@ -176,13 +189,26 @@ plotRep <- ggplot(data = resultRep, aes(x = `Change %`, y = `Change`)) +
   )
 
 
-plotRep
-
-reps <- lm(Change ~ `Change %`, data = resultRep)
-summary(reps)
-
 
 ```
+
+```{r plot-rep, echo=FALSE, fig.width=8, fig.height=6, fig.align='center'}
+print(plotRep)
+```
+
+```{r}
+reps <- lm(Change ~ `Change %`, data = resultRep)
+
+modelsummary::modelsummary(
+  reps,
+  statistic = c("Standard Error. = {std.error}", 
+                "p-value = {p.value}"),
+  gof_map = c("nobs", "r.squared", "adj.r.squared"),
+  coef_rename = c("(Intercept)" = "Approval Change")
+)
+
+```
+
 
 
 ```{r}
