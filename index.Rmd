@@ -1,22 +1,19 @@
 ---
 title: "PS270 Final Project"
 author: "Kaushal Dasika"
-description: "My final project"
+description: "Examining the relationship between stock market performance, approval ratings, and re-election outcomes of incumbent U.S. presidents"
 output:
   distill::distill_article:
     self_contained: false
 ---
 
 
+How are the approval ratings of incumbent U.S. presidents running for the second term related to the stock market performance during their first term and did they win the election? 
 
-## Project thoughts
+The relationship between economic performance and electoral outcomes has long been a point of discussion among political scientists and this research aims to study the connection between the approval ratings of incumbent U.S. presidents running for a second term and the stock market performance during their first term, specifically the S&P 500.
 
-My research question for the Final Project is: How are the approval ratings of incumbent U.S. presidents running for the second term related to the stock market performance during their first term? My hypothesis is that higher stock market growth results in higher approval ratings going into a re-election. 
-The hypothesis may be true as economic performance is a big talking point during elections and it makes sense that the voting public would be more receptive to the second term of a President that has shown economic growth. In this case, the variables of interest are the performance of the S&P 500 index, which is usually used to measure and gauge the development of the U.S. economy, and the approval ratings of an incumbent President going into re-election taken from the Roper Center.
+This hypothesis sheds light on how voters respond to economic outcomes under incumbent leadership. If economic growth positively correlates with approval ratings, it suggests that the voters reward incumbents for economic success, potentially tipping the scales in a close election. The use of the S&P 500 index provides a quantitative and widely recognized measure of economic performance, while approval ratings offer a direct lens into public sentiment, as pre-election polls may be more biased since voters also follow party lines while casting their ballots. Understanding this relationship deepens our knowledge of how economic indicators influence elections.  A pattern in the data that would prove my hypothesis is if positive and negative changes in the S&P translate to approval ratings. I will also analyze the relationship specifically based on party and election results to see if the correlation is stronger or weaker based on those factors.
 
-
-The approval rating variable will be measured by taking multiple sources (to ensure the overall representation is as accurate as possible) and will be compared to the S&P based on monthly changes in the index and approval ratings between the midterm and presidential elections (24 months). A pattern in the data that would prove my hypothesis is if positive and negative changes in the S&P translate to approval ratings and since the data will be measured over 2 years, it can account for before an incumbent declares that they are running again. 
-A pattern that would disprove is if there was no positive correlation on average across the 24-month period.
 
 
 
